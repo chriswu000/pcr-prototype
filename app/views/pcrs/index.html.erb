@@ -1,0 +1,23 @@
+<h1>Listing pcrs for House:  <%= @house.name %></h1>
+
+<table>
+  <tr>
+    <th>Pcr number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pcrs.each do |pcr| %>
+  <tr>
+    <td><%= pcr.pcr_number %></td>
+    <td><%= link_to 'Show', pcr %></td>
+    <td><%= link_to 'Edit', edit_pcr_path(pcr) %></td>
+    <td><%= link_to 'Destroy', pcr, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pcr', new_pcr_path %>

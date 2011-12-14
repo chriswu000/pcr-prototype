@@ -1,0 +1,21 @@
+<%= form_for(@pcr) do |f| %>
+  <% if @pcr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pcr.errors.count, "error") %> prohibited this pcr from being saved:</h2>
+
+      <ul>
+      <% @pcr.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pcr_number %><br />
+    <%= f.text_field :pcr_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

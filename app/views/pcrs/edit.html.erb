@@ -1,0 +1,34 @@
+<h1>Editing pcr</h1>
+
+<div class="wrapper">
+  <div id="pcr_accordion">
+    <h3><%= link_to "Dispatch", "#dispatch" %></h3>
+    <div>
+      <p>Times</p>
+      <p>Address</p>
+      <p>Dispatch Info</p>
+    </div>
+    <h3><%= link_to "Physical Exam", "#physical_exam" %></h3>
+    <div>
+      <p>Patient Protective Devices Used</p>
+      <p>Pre-Existing Conditions</p>
+      <p>GCS</p>
+    </div>
+    <h3><%= link_to "Patient Info", "@patient_info" %></h3>
+    <div>
+      <p>Name</p>
+      <p>Home Address</p>
+      <p>Hx</p>
+      <p>Meds & Allergies</p>
+    </div>
+  </div>
+
+  <div class="pcr_content">
+    <p><%= render 'form' %></p>
+    <%= link_to 'Show', @pcr %> |
+    <%= link_to 'Back', pcrs_path %>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prototype</title>
+    <%= stylesheet_link_tag "jquery-ui-1.8.16.custom.css", 'custom' %>
+    <%= javascript_include_tag "jquery-1.6.2.min.js", "jquery-ui-1.8.16.custom.min.js", "jquery_ujs.js", "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div class="container round">
+      <section class="round">
+      <% flash.each do |key, value| -%>
+        <%= content_tag(:div, value, :class => "flash #{key}") %>
+      <% end -%>
+      <%= yield %>
+      </section>
+    </div>
+
+    <%= debug(params) if Rails.env.development? %>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body {
+  background: #CFF;
+}
+.container {
+  width: 1200px;
+  background: white;
+  padding: 5%;
+  overflow: auto;
+}
+
+.wrapper {
+  overflow: auto;
+}
+  
+#pcr_accordion {
+  width: 20%;
+  float: left;
+}
+
+.pcr_content {
+  width: 75%;
+  float: left;
+  padding: 2.5%;
+}
+

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @dispatch.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @dispatch.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @dispatch.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @dispatch.zip %>
+</p>
+
+<p>
+  <b>Pcr:</b>
+  <%= @dispatch.pcr_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_dispatch_path(@dispatch) %> |
+<%= link_to 'Back', dispatches_path %>

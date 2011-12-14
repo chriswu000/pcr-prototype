@@ -1,0 +1,31 @@
+<h1>Listing dispatches</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Pcr</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dispatches.each do |dispatch| %>
+  <tr>
+    <td><%= dispatch.address %></td>
+    <td><%= dispatch.city %></td>
+    <td><%= dispatch.state %></td>
+    <td><%= dispatch.zip %></td>
+    <td><%= dispatch.pcr_id %></td>
+    <td><%= link_to 'Show', dispatch %></td>
+    <td><%= link_to 'Edit', edit_dispatch_path(dispatch) %></td>
+    <td><%= link_to 'Destroy', dispatch, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dispatch', new_dispatch_path %>

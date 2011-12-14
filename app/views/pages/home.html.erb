@@ -1,0 +1,10 @@
+<h1>Pages#home</h1>
+
+<% if user_signed_in? -%>
+  <p><%= current_user.email %> is signed in</p>
+  <p><%= link_to 'Sign out', destroy_user_session_path %></p>
+  <p><%= link_to 'Edit user', edit_user_registration_path %></p>
+<% else -%>
+  <p><%= link_to 'Sign in', new_user_session_path %></p>
+  <p><%= link_to 'Sign up', new_user_registration_path %></p>
+<% end -%>
